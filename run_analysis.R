@@ -15,7 +15,11 @@ full.Subject <- rbind(train.Subject, test.Subject)
  
 #### 2. Extracts only the measurements on the mean and standard deviation for 
 ####    each measurement
- 
+features <- read.table("./features.txt")
+setnames(features, names(features), c("featureNum", "featureName"))
+indices_matching <- grep("-mean\\(\\)|-std\\(\\)", tolower(features[, 2]), value=FALSE)
+full.Data <- full.Data[, indices_matching]
+names(full.Data) <- tolower(features[indices_matching, 2])
 
 #### 3. Uses descriptive activity names to name the activities in the data set.
  

@@ -22,7 +22,10 @@ full.Data <- full.Data[, indices_matching]
 names(full.Data) <- tolower(features[indices_matching, 2])
 
 #### 3. Uses descriptive activity names to name the activities in the data set.
- 
+activities <- read.table("./activity_labels.txt")
+activities[, 2] <- tolower(activities[,2])
+full.Labels[,1] <- activities[full.Labels[,1], 2] 
+names(full.Labels) <- "Activity"
 
 #### 4. Appropriately labels the data set with descriptive activity names.
  

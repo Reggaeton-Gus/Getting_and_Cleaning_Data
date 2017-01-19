@@ -28,7 +28,10 @@ full.Labels[,1] <- activities[full.Labels[,1], 2]
 names(full.Labels) <- "Activity"
 
 #### 4. Appropriately labels the data set with descriptive activity names.
- 
+names(full.Subject) <- "Subject"
+Tidy.Data <- cbind(full.Subject, full.Labels, full.Data)
+write.table(Tidy.Data, "./merged_tidy_data.txt")
+
 
 #### 5. Creates a second, independent tidy data set with the average of each 
 ####    variable for each activity and each subject.

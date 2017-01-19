@@ -4,7 +4,7 @@
 Getting and Cleaning Data Project
 Steps:
 
-    Unzip the raw data
+    Unzip the raw data (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
     Change current working directory to the UCI HAR Dataset folder.
 

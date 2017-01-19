@@ -35,5 +35,8 @@ write.table(Tidy.Data, "./merged_tidy_data.txt")
 
 #### 5. Creates a second, independent tidy data set with the average of each 
 ####    variable for each activity and each subject.
- 
+id <- c("Subject", "Activity")
+measure_vars <- setdiff(colnames(Tidy.Data), id)
+melted_data <- melt(Tidy.Data, id=id, measure.vars=measure_vars)Tidy.Data.Mean <- dcast(melted_data, Activity + Subject ~ variable, mean)
+write.table(Tidy.Data.Mean, "./merged_tidy_data_mean.txt")
 

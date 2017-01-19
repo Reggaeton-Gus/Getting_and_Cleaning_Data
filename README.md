@@ -6,4 +6,4 @@
 * Download the run_analysis.R file in the previous folder.
 * Run source("run_analysis.R")
 * The datasets should get created in the current directory as merged_tidy_data.txt and merged_tidy_data_mean.txt
-* Code book for the tidy dataset is available here.
+* Code book for the tidy dataset is available [here] (https://github.com/Reggaeton-Gus/Getting_and_Cleaning_Data/blob/master/CodeBook.md).
